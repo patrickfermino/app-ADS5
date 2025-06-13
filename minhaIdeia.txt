@@ -1,0 +1,6 @@
+Criar um aplicativo no qual será de Anúncios de Carros, Motos, Aviões, Lanchas 
+Terá um Ion List para listar os anuncios cada anuncio com card diferente.
+Ao clicar no anuncio o aplicativo deve abrir um nova tela com a informação do anuncio que sofreu o click.
+Na segunda tela deverá conter a imagem do produto a venda e abaixo as informações daquele anuncio (essas informações serão todas chumbadas).
+Deve conter na segunda tela um  botão de voltar (No canto superior esquerdo).
+O aplicativo deve ser na cor roxa e para os card usar um roxo com tom mais fraco.
