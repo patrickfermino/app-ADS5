@@ -1,2 +1,3 @@
 # app-ADS5
 Aplicativo básico de anuncios de vendas de carros, motos, lanchas, aviões, etc...
+[node_modules](node_modules)

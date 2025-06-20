@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="anuncio">
+  <ion-card color="light">
+    <img [src]="anuncio.imagem" />
+    <ion-card-header>
+      <ion-card-title>{{ anuncio.titulo }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Tipo:</strong> {{ anuncio.tipo }}</p>
+      <p><strong>Descrição:</strong> {{ anuncio.descricao }}</p>
+      <p><strong>Preço:</strong> {{ anuncio.preco }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,10 +1,83 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar color="primary">
-    <ion-title size="">
-      Auto Car do Patrick
+    <ion-title>
+     Patrick Multimarcas
     </ion-title>
-      Veja nossos anúncios!
   </ion-toolbar>
 </ion-header>
 
-<ion-list></ion-list>
+<ion-content class="ion-padding">
+
+  <ng-container *ngIf="!nomeSalvo; else telaAnuncios">  
+    <h2>Seja bem-vindo!</h2>
+    
+    <p>Digite seu nome para acessar os anúncios:</p>
+
+    <ion-item>
+      <ion-label position="floating">Seu nome</ion-label>
+      <ion-input [(ngModel)]="nome" type="text"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" class="ion-margin-top" (click)="salvarNome()">
+      OK
+    </ion-button> 
+  </ng-container>
+  <ng-template #telaAnuncios>
+    <h2 style="margin-top: 10px;">Bem-vindo, {{ nomeSalvo }}!</h2>
+
+    <ion-list>
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+    <ion-button 
+    size="small" 
+    position="left"
+    color="danger" 
+    (click)="resetarUsuario()">
+     Sair
+</ion-button>
+</div>
+      <ion-card [routerLink]="['/detalhe', 0]">
+        <img src="assets/civic.webp" />
+        <ion-card-header>
+          <ion-card-title>Civic 2020</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Sedan, econômico e confortável</p>
+          <p><strong>R$ 95.000</strong></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card [routerLink]="['/detalhe', 1]">
+        <img src="assets/moto.jpg" />
+        <ion-card-header>
+          <ion-card-title>Yamaha MT-03</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Esportiva e leve</p>
+          <p><strong>R$ 28.000</strong></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card [routerLink]="['/detalhe', 2]">
+        <img src="assets/aviao1.webp" />
+        <ion-card-header>
+          <ion-card-title>Avião do Michael</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Avião Particular GTA V, 4 lugares</p>
+          <p><strong>R$ 1.200.000</strong></p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card [routerLink]="['/detalhe', 3]">
+        <img src="assets/lancha.webp" />
+        <ion-card-header>
+          <ion-card-title>Lancha Focker Motor de um Oppala</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Luxuosa e potente</p>
+          <p><strong>R$ 300.000</strong></p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ng-template>
+</ion-content>
